@@ -89,8 +89,8 @@ func main() {
 	cli.VersionFlag = flagVersion
 	started := time.Now()
 	app := &cli.App{
-		Name:  "timg",
-		Usage: "shows a single image or all images of a directory inside the terminal (e.g. ITerm2)",
+		Name:  "Timg",
+		Usage: "Shows a single image or all images of a directory inside the terminal (e.g. ITerm2)",
 		UsageText: "timg [global options] [commands] [comand options]\n\n" +
 			"The default command is show and can be omitted. See 'timg h show' for help.\n\n" +
 			"Examples: 'timg ~/Pictures/', 'timg -r -h 80 ~/Pictures/Photos\\ Library.photoslibrary/originals/'",
