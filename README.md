@@ -3,7 +3,17 @@ timg is a tool that shows images in the terminal (iTerm2 only)
 
 **Repeat: iTerm2 only!**
 
-**NOTICE:** Currently, there seems to be a [bug with iTerm2](https://gitlab.com/gnachman/iterm2/-/issues/10420) that does not free memory. This tool was basically made for making the problem reproducible by the developers of iTerm2
+**NOTICE:** Currently, there seems to be a [bug with iTerm2](https://gitlab.com/gnachman/iterm2/-/issues/10420) that does not free memory. The current nightly of iTerm2 (Build 3.5.20220624-nightly) that I am using now, seems to fix this and releases the memory when the tab/window of the terminal gets closed.
+
+ It still does not free the memory when the scrollback gets cleared with something like:
+
+```
+alias "cls"="clear && printf '\e[3J'"
+```
+
+The memory gets freed when "Clear Buffer" from the menu is used!
+
+This tool was basically made for making the problem reproducible by the developers of iTerm2
 
 Install with: `go install github.com/oderwat/timg@latest`
 
@@ -39,3 +49,8 @@ GLOBAL OPTIONS:
    --use-extensions, -x               use extensions to predict what files can be shown (default: true)
    --width value, -w value            sets the with of the output (default: 0)
 ```
+
+Example Output:
+
+![](assets/timg-demo.jpg)
+
